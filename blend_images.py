@@ -41,5 +41,5 @@ if __name__ == "__main__":
     blended_img = blend_images(args.input, args.overlay, args.alpha)
 
     # Save blended image
-    blended_img.save(args.output)
+    cv2.imwrite(args.output, blended_img)
     print(f"Cropped image saved to {args.output}")
