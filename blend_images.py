@@ -15,7 +15,7 @@ def blend_images(background_img_path, overlay_img_path, alpha):
     """
     # Load background and overlay images
     background_img = cv2.imread(background_img_path)
-    overlay_img = cv2.imread(overlay_img_path, cv2.IMREAD_UNCHANGED)
+    overlay_img = cv2.imread(overlay_img_path)
     
     # Resize background image to match overlay image if needed using lanczos algorithm
     if background_img.shape[:2] != overlay_img.shape[:2]:
