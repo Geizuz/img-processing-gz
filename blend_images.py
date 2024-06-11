@@ -32,7 +32,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Blend two images with an asbitrary alpha level.")
     parser.add_argument("input", type=str, help="Path to the input image file.")
-    parset.add_argument("overlay", type=str, help="Path to the overlay image.")
+    parser.add_argument("overlay", type=str, help="Path to the overlay image.")
     parser.add_argument("--alpha", type=float, default=0.5, help="Transparency level (0.0 - 1.0)")
     parser.add_argument("output", type=str, help="Path to save the blended images.")
     args = parser.parse_args()
