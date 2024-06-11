@@ -30,11 +30,11 @@ def blend_images(background_img_path, overlay_img_path, alpha):
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description="Blend two images with an abritrary alpha level.")
-    parser.add_argument("input", help="Path to the input image file.")
-    parset.add_argument("overlay", help="Path to the overlay image.")
-    parser.add_argument("alpha", help="Alpha level for transparency (0-1.0)".)
-    parser.add_argument("output", help="Path to save the blended images.")
+    parser = argparse.ArgumentParser(description="Blend two images with an asbitrary alpha level.")
+    parser.add_argument("input", type=str, help="Path to the input image file.")
+    parset.add_argument("overlay", type=str, help="Path to the overlay image.")
+    parser.add_argument("--alpha", type=float, default=0.5, help="Transparency level (0.0 - 1.0)")
+    parser.add_argument("output", type=str, help="Path to save the blended images.")
     args = parser.parse_args()
 
     # Blend images
