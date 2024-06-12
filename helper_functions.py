@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from skimage.io import imread
+import os
 
 def pltimg(image_data):
     imgplot = plt.imshow(image_data)
@@ -28,7 +29,20 @@ def save_images(image_list, image_path):
     image_label = image_path.split('.')
     for count, image in enumerate(image_list, start = 1):
 		plt.imsave(f'{image_label[0]}_{count}.png',image)
-				
+
+def save_images_batou(image_list, image_path, output_folder):
+    # Ensure the output folder exists
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+    
+    # Split the image path to get the base name without the extension
+    image_label = os.path.splitext(os.path.basename(image_path))[0]
+    
+    # Save each image in the list with a numbered filename
+    for count, image in enumerate(image_list, start=1):
+        output_path = os.path.join(output_folder, f'{image_label}_{count}.png')
+        plt.imsave(output_path, image)
+
 def square_array(grid_array):
     rows, cols = grid_array.shape[:2]
     if rows == cols:
