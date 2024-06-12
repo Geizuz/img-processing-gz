@@ -42,4 +42,4 @@ if __name__ == "__main__":
 
     # Save blended image
     cv2.imwrite(args.output, blended_img)
-    print(f"Cropped image saved to {args.output}")
+    print(f"Blended image saved to {args.output}")
