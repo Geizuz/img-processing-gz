@@ -63,7 +63,7 @@ def array_inset(inset, dim_list):
         rgb_inset = inset
 
     larger_array[dim_list[0]:dim_list[0] + inset.shape[0],
-                 dim_list[1]:dim_list[1] + inset.shape[1]] = rgb_inset
+		dim_list[1]:dim_list[1] + inset.shape[1]] = rgb_inset
     return larger_array
 
 def image_segmentation(image_path, overlap_ratio):
