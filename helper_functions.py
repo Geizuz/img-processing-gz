@@ -28,7 +28,7 @@ def format2(axis_value, overlap_ratio):
 def save_images(image_list, image_path):
     image_label = image_path.split('.')
     for count, image in enumerate(image_list, start = 1):
-		plt.imsave(f'{image_label[0]}_{count}.png',image)
+        plt.imsave(f'{image_label[0]}_{count}.png',image)
 
 def save_images_batou(image_list, image_path, output_folder):
     # Ensure the output folder exists
